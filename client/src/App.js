@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -11,7 +9,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/register', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, {
         username,
         password,
       });
